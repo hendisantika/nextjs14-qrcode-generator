@@ -11,6 +11,7 @@ import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+import {Analytics} from "@vercel/analytics/react"
 
 const formSchema = z.object({
   url: z.string().url(),
@@ -59,6 +60,7 @@ export default function Home() {
 
   return (
       <main className="flex min-h-screen flex-col items-center p-24">
+        <Analytics/>
         <Form {...form}>
           <form
               className={cn("w-1/2 flex gap-3")}
